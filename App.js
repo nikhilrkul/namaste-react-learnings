@@ -1,3 +1,5 @@
+import React from 'react'
+import ReactDOM from 'react-dom/client';
 /**
  * Use case : Create Nested div within browser
  *
@@ -13,8 +15,8 @@
 
 const parent = React.createElement("div", { id: "parent" }, [
   React.createElement("div", { id: "child-1" }, [
-    React.createElement("h1", {}, "I'm H1 tag"),
-    React.createElement("h2", {}, "I'm H2 tag"),
+    React.createElement("h1", {}, "This is React 🚀"),
+    React.createElement("h2", {}, "by Nikhil Kulkarni"),
   ]),
   React.createElement("div", { id: "child-2" }, [
     React.createElement("h1", {}, "I'm H1 tag from Div 2"),
@@ -26,5 +28,4 @@ console.log(parent); // object
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
-root.render(parent);
-
+root.render(parent)
