@@ -1,8 +1,47 @@
 import RestaurantCard from "./RestaurantCard";
-//import resList from "../utils/mockData";
+import resList from "../utils/mockData";
+import { useState } from "react";
 
 const Body = () => {
-  let listOfRestaurant = [
+  // State variable
+  const [listOfRestaurant, setListOfRestaurant] = useState(
+    resList
+    // {
+    //   data: {
+    //     id: "577441",
+    //     name: "NOTO - Healthy Ice Cream",
+    //     cloudinaryImageId: "51bd9c7efcc0e05c614c0e0674434e62",
+    //     cuisines: ["Ice Cream"],
+    //     costForTwo: 25000,
+    //     deliveryTime: 25,
+    //     avgRating: "3.6",
+    //   },
+    // },
+    // {
+    //   data: {
+    //     id: "577442",
+    //     name: "The Doorway cafe",
+    //     cloudinaryImageId: "51bd9c7efcc0e05c614c0e0674434e62",
+    //     cuisines: ["Pasta"],
+    //     costForTwo: 25000,
+    //     deliveryTime: 25,
+    //     avgRating: "4.3",
+    //   },
+    // },
+    // {
+    //   data: {
+    //     id: "577443",
+    //     name: "Mc Dowell",
+    //     cloudinaryImageId: "51bd9c7efcc0e05c614c0e0674434e62",
+    //     cuisines: ["Burger"],
+    //     costForTwo: 25000,
+    //     deliveryTime: 25,
+    //     avgRating: "4.1",
+    //   },
+    // },
+  );
+
+  let listOfRestaurantJS = [
     {
       data: {
         id: "577441",
@@ -48,10 +87,14 @@ const Body = () => {
           className="filter-btn"
           onClick={() => {
             //console.log("Button Clicked");
-            listOfRestaurant = listOfRestaurant.filter(
+            // listOfRestaurantJS = listOfRestaurantJS.filter(
+            //   (res) => res.data.avgRating > 4
+            // );
+            const filtered = listOfRestaurant.filter(
               (res) => res.data.avgRating > 4
             );
-            console.log(listOfRestaurant);
+            console.log(filtered);
+            setListOfRestaurant(filtered);
           }}
         >
           Top rated Restaurant
