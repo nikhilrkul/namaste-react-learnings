@@ -1,7 +1,7 @@
 const resList = [
   {
     type: "restaurant",
-    data: {
+    info: {
       type: "F",
       id: "577441",
       name: "NOTO - Healthy Ice Cream",
@@ -142,7 +142,7 @@ const resList = [
   },
   {
     type: "restaurant",
-    data: {
+    info: {
       type: "F",
       id: "71042",
       name: "NEW Mahesh friends food center",
@@ -278,7 +278,7 @@ const resList = [
   },
   {
     type: "restaurant",
-    data: {
+    info: {
       type: "F",
       id: "346181",
       name: "Al Bawarchi Biryani",
@@ -414,7 +414,7 @@ const resList = [
   },
   {
     type: "restaurant",
-    data: {
+    info: {
       type: "F",
       id: "79795",
       name: "Bombay Kulfi",
@@ -555,7 +555,7 @@ const resList = [
   },
   {
     type: "restaurant",
-    data: {
+    info: {
       type: "F",
       id: "582585",
       name: "Donne Biriyani House",
@@ -651,7 +651,7 @@ const resList = [
   },
   {
     type: "restaurant",
-    data: {
+    info: {
       type: "F",
       id: "132622",
       name: "Marwadi Chaat & Tiffin Services Shanti nagar",
@@ -786,7 +786,7 @@ const resList = [
   },
   {
     type: "restaurant",
-    data: {
+    info: {
       type: "F",
       id: "495055",
       name: "Afghani Tandoori Hub",
@@ -922,7 +922,7 @@ const resList = [
   },
   {
     type: "restaurant",
-    data: {
+    info: {
       type: "F",
       id: "496423",
       name: "Dum Biryani Hub",
@@ -1058,7 +1058,7 @@ const resList = [
   },
   {
     type: "restaurant",
-    data: {
+    info: {
       type: "F",
       id: "580691",
       name: "Rollsking",
@@ -1194,7 +1194,7 @@ const resList = [
   },
   {
     type: "restaurant",
-    data: {
+    info: {
       type: "F",
       id: "307013",
       name: "TEXAS BURGERS",
@@ -1330,7 +1330,7 @@ const resList = [
   },
   {
     type: "restaurant",
-    data: {
+    info: {
       type: "F",
       id: "446562",
       name: "Dairy Day Ice Creams",
@@ -1466,7 +1466,7 @@ const resList = [
   },
   {
     type: "restaurant",
-    data: {
+    info: {
       type: "F",
       id: "548710",
       name: "Samosa Party",
@@ -1613,7 +1613,7 @@ const resList = [
   },
   {
     type: "restaurant",
-    data: {
+    info: {
       type: "F",
       id: "654841",
       name: "HFC Call Me Kabab",
@@ -1710,7 +1710,7 @@ const resList = [
   },
   {
     type: "restaurant",
-    data: {
+    info: {
       type: "F",
       id: "232214",
       name: "Selena Food Center",
@@ -1845,7 +1845,7 @@ const resList = [
   },
   {
     type: "restaurant",
-    data: {
+    info: {
       type: "F",
       id: "305684",
       name: "SRI SAPANA DHABA",
