@@ -6,40 +6,6 @@ import Shimmer from "./Shimmer";
 const Body = () => {
   // State variable
   const [listOfRestaurant, setListOfRestaurant] = useState([]);
-  // {
-  //   data: {
-  //     id: "577441",
-  //     name: "NOTO - Healthy Ice Cream",
-  //     cloudinaryImageId: "51bd9c7efcc0e05c614c0e0674434e62",
-  //     cuisines: ["Ice Cream"],
-  //     costForTwo: 25000,
-  //     deliveryTime: 25,
-  //     avgRating: "3.6",
-  //   },
-  // },
-  // {
-  //   data: {
-  //     id: "577442",
-  //     name: "The Doorway cafe",
-  //     cloudinaryImageId: "51bd9c7efcc0e05c614c0e0674434e62",
-  //     cuisines: ["Pasta"],
-  //     costForTwo: 25000,
-  //     deliveryTime: 25,
-  //     avgRating: "4.3",
-  //   },
-  // },
-  // {
-  //   data: {
-  //     id: "577443",
-  //     name: "Mc Dowell",
-  //     cloudinaryImageId: "51bd9c7efcc0e05c614c0e0674434e62",
-  //     cuisines: ["Burger"],
-  //     costForTwo: 25000,
-  //     deliveryTime: 25,
-  //     avgRating: "4.1",
-  //   },
-  // },
-  //);
 
   useEffect(() => {
     fetchData();
