@@ -2,6 +2,7 @@ import RestaurantCard from "./RestaurantCard";
 import resList from "../utils/mockData";
 import { useState, useEffect } from "react";
 import Shimmer from "./Shimmer";
+import { Link } from "react-router-dom";
 
 const Body = () => {
   // State variable
@@ -26,8 +27,9 @@ const Body = () => {
     // Old Data : const jsonData = json.data.cards[2].data.data.cards;
 
     // console.log(json);
+
     const jsonData =
-      json.data.cards[5].card.card?.gridElements?.infoWithStyle?.restaurants;
+      json.data.cards[1].card.card?.gridElements?.infoWithStyle?.restaurants;
 
     // json?.data?.cards[2]?.data?.data?.cards;
 
@@ -82,10 +84,11 @@ const Body = () => {
             //   (res) => res.data.avgRating > 4
             // );
             const filtered = listOfRestaurant.filter(
-              (res) => res.info.avgRating > 4
+              (res) => res.info.avgRating > 4.2
             );
             console.log(filtered);
-            setListOfRestaurant(filtered);
+            // setListOfRestaurant(filtered);
+            setfilteredRestaurant(filtered);
           }}
         >
           Top rated Restaurant
@@ -115,7 +118,9 @@ const Body = () => {
           )}
         </h4> */}
         {filteredRestaurant.map((restaurant) => (
-          <RestaurantCard key={restaurant.info.id} resData={restaurant} />
+          <Link to={"/restaurant/" + restaurant.info.id}>
+            <RestaurantCard key={restaurant.info.id} resData={restaurant} />
+          </Link>
         ))}
       </div>
     </div>
