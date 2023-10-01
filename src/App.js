@@ -1,4 +1,4 @@
-import React from "react";
+import React, { lazy } from "react";
 import ReactDOM from "react-dom/client";
 import Header from "./components/Header";
 import Body from "./components/Body";
@@ -7,6 +7,7 @@ import Contact from "./components/Contact";
 import Error from "./components/Error";
 import RestaurantMenu from "./components/RestuarantMenu";
 import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
+// import Grocery from "./components/Grocery";
 
 // const resObj = {
 //   type: "restaurant",
@@ -147,6 +148,14 @@ import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
 
 // not using keys (not acceptable) <<< index as key <<< unique id (best practice)
 
+// Chunking
+// Code splitting
+// Dynamic bundling
+// lazy loading
+// on demand loading
+
+const Grocery = lazy(() => import("./components/Grocery"));
+
 const Applayout = () => {
   return (
     <div className="app">
@@ -173,6 +182,10 @@ const appRouter = createBrowserRouter([
       {
         path: "/contact",
         element: <Contact />,
+      },
+      {
+        path: "/grocery",
+        element: <Grocery />,
       },
       {
         path: "/restaurant/:resId",
