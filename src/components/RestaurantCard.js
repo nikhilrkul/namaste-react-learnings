@@ -16,9 +16,9 @@ const RestaurantCard = (props) => {
   } = resData?.info;
 
   return (
-    <div className="rest-card" style={{ backgroundColor: "#ffebcd" }}>
+    <div className="p-4 m-4 w-[250px] rounded-lg bg-gray-50 hover:bg-gray-300">
       <img
-        className="rest-logo"
+        className="rounded-lg"
         alt="rest-logo"
         src={
           CDN_URL + cloudinaryImageId
@@ -29,7 +29,7 @@ const RestaurantCard = (props) => {
       {/* <h3>{props.resName}</h3> */}
       {/* 1st Option : */}
       {/* <h3>{resObj.data.name}</h3> */}
-      <h3>{name}</h3>
+      <h3 className="font-bold py-4 text-lg">{name}</h3>
       {/* 1st Option : */}
       {/* <h4>{props.cusine}</h4> */}
       {/* <h4>{resObj.data.cuisines}</h4> */}

@@ -30,7 +30,7 @@ const Body = () => {
     // console.log(json);
 
     const jsonData =
-      json.data?.cards[2]?.card?.card?.gridElements?.infoWithStyle?.restaurants;
+      json.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants;
 
     // json?.data?.cards[2]?.data?.data?.cards;
 
@@ -54,17 +54,18 @@ const Body = () => {
       {/* <div className="search">
         <input type="search" /> 
       </div> */}
-      <div className="filter">
-        <div className="search">
+      <div className="filter flex">
+        <div className="search p-4 m-4">
           <input
             type="text"
-            className="search-box"
+            className="border border-solid border-black"
             value={searchText}
             onChange={(e) => {
               setSearchText(e.target.value);
             }}
           ></input>
           <button
+            className="px-4 py-2 bg-green-100 m-4 rounded-lg"
             onClick={() => {
               // Filter the list of restaurants and update the UI
               // searchtext
@@ -82,26 +83,28 @@ const Body = () => {
             Search
           </button>
         </div>
-        <button
-          className="filter-btn"
-          onClick={() => {
-            //console.log("Button Clicked");
-            // listOfRestaurantJS = listOfRestaurantJS.filter(
-            //   (res) => res.data.avgRating > 4
-            // );
-            const filtered = listOfRestaurant.filter(
-              (res) => res.info.avgRating > 4.2
-            );
-            console.log(filtered);
-            // setListOfRestaurant(filtered);
-            setfilteredRestaurant(filtered);
-          }}
-        >
-          Top rated Restaurant
-        </button>
+        <div className="filter-top-rated p-4 m-4 flex items-center">
+          <button
+            className="px-4 py-2 bg-gray-100 rounded-lg"
+            onClick={() => {
+              //console.log("Button Clicked");
+              // listOfRestaurantJS = listOfRestaurantJS.filter(
+              //   (res) => res.data.avgRating > 4
+              // );
+              const filtered = listOfRestaurant.filter(
+                (res) => res.info.avgRating > 4.2
+              );
+              console.log(filtered);
+              // setListOfRestaurant(filtered);
+              setfilteredRestaurant(filtered);
+            }}
+          >
+            Top rated Restaurant
+          </button>
+        </div>
       </div>
 
-      <div className="rest-container">
+      <div className="flex flex-wrap">
         {/* <RestaurantCard
             // resName="Meghana Foods"
             // cusine="North Indian, Chineese"
