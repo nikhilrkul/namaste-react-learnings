@@ -1,4 +1,4 @@
-import RestaurantCard from "./RestaurantCard";
+import RestaurantCard, { withPromotedLabel } from "./RestaurantCard";
 import resList from "../utils/mockData";
 import { useState, useEffect } from "react";
 import Shimmer from "./Shimmer";
@@ -11,6 +11,8 @@ const Body = () => {
   const [filteredRestaurant, setfilteredRestaurant] = useState([]);
 
   const [searchText, setSearchText] = useState("");
+
+  // const RestaurantCardPromoted = withPromotedLabel(RestaurantCard);
 
   // Whenever state variable changes, react triggers reconciliation cycle(re-renders the component)
   console.log("Body rendered");
@@ -30,7 +32,7 @@ const Body = () => {
     // console.log(json);
 
     const jsonData =
-      json.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants;
+      json.data?.cards[2]?.card?.card?.gridElements?.infoWithStyle?.restaurants;
 
     // json?.data?.cards[2]?.data?.data?.cards;
 
@@ -128,6 +130,11 @@ const Body = () => {
         </h4> */}
         {filteredRestaurant.map((restaurant) => (
           <Link to={"/restaurant/" + restaurant.info.id}>
+            {/* {restaurant.data.promoted ? (
+              <RestaurantCardPromoted resData={restaurant} />
+            ) : (
+              <RestaurantCard resData={restaurant} />
+            )} */}
             <RestaurantCard key={restaurant.info.id} resData={restaurant} />
           </Link>
         ))}
