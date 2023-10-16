@@ -1,9 +1,12 @@
+import { useContext } from "react";
 import { CDN_URL } from "../utils/constants";
+import UserContext from "../utils/UserContext";
 
 const RestaurantCard = (props) => {
   //console.log(props);
 
   const { resData } = props;
+  const { loggedInUser } = useContext(UserContext);
 
   const {
     cloudinaryImageId,
@@ -50,6 +53,7 @@ const RestaurantCard = (props) => {
       {/* <h4>{resObj.data.deliveryTime}</h4> */}
       {/* <h4>{resData.data.deliveryTime} minutes</h4> */}
       <h4>{sla.deliveryTime} minutes</h4>
+      <h4>User : {loggedInUser}</h4>
     </div>
   );
 };
